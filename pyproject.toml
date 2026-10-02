@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-webhook-events"
+version = "0.1.0"
+description = "MCP Events (webhook delivery) for servers built on the official Python MCP SDK. Works with ChatGPT."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Shaun Owen" }]
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=2.2,<3",
+    "standardwebhooks>=1.1",
+    "jsonschema>=4",
+]
+keywords = ["mcp", "model context protocol", "events", "webhooks", "chatgpt", "openai", "standard webhooks"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Developers",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries",
+]
+
+[project.optional-dependencies]
+test = ["uvicorn"]
+
+[project.urls]
+Homepage = "https://github.com/s1980amber-commits/mcp-webhook-events"
+Issues = "https://github.com/s1980amber-commits/mcp-webhook-events/issues"
+
+[tool.setuptools]
+packages = ["mcp_webhook_events"]
